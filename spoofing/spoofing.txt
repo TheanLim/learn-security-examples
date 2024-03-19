@@ -1,1 +1,10 @@
-Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+Vulnerability comes from 
+- allowing accessing to session's cookie from the dom document.cookie. This causes session hijacking.
+- allowing cross-site requests. This causes cross site request forgery.
+
+The secure version:
+- The httpOnly attribute, when set to true in the configuration of a cookie, instructs the browser to restrict access to the cookie only through HTTP requests and prevents client-side scripts (such as JavaScript) from accessing it. 
+- only allow browser to send cookies to requests that go to this server's site -- `sameSite` = True
+- `secret` further hides the `secret` used by the middleware, preventing tampering of cookies intercepted.
+
+Spoofing violates the Confidentiality property: Ensuring that sensitive information is accessible only to authorized individuals or entities.

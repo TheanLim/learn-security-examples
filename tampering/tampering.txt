@@ -1,0 +1,4 @@
+Vulnerability coming from simply rendering the input string, which included html and javascript.
+Secure version escapes all the html into strings before injection.
+
+Tampering violates the Integrity property: Guaranteeing that data remains unchanged and uncorrupted during storage, transmission, or processing.
