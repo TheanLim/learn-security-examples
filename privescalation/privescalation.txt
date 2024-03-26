@@ -1,0 +1,3 @@
+* Anyone can take on the userId 1 (thus admin role), and change it's userRole. 
+The secure version uses the session Id to identify instead of the input userId. This assumes that the session is established after a secured log in
+* Using MultiFactor authentication can help preventing such attacks.

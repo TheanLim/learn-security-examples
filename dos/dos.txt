@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Denial of Service happens when a services is loaded with tons of request or exploited with its vulnerability. Either of this causes ther server to crash
+In this code example, the input query parameter ID is not sanitized, and that causes the server to crash when the wrong ID is provided, and the DB is queried.
+The secure version safeguard this by adding a try-catch block to handle errors instead of letting the error to crash the server.
+
+Additional mechanisms:  include rate limiting, and potentially adding captcha if needed.

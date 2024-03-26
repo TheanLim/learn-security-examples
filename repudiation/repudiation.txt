@@ -1,2 +1,9 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Vulnerable because there's no way to identify the bad actor. Secure version logs each HTTP method, url and IP with timestamp. 
+It also logs error, if applicable.
+
+Additional mechanism: 
+- ensure that the logs are secured (such as storing it in a safeguarded db, sanitize incoming query).
+- Introduce auditing policy such as running a script that runs nightly to flag for specific patterns for deeper checks.
